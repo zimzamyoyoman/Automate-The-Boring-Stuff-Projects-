@@ -1,3 +1,5 @@
+import sys
+
 def collatz(number):
     if (number % 2 == 0):
         num=number//2
@@ -9,8 +11,13 @@ def collatz(number):
         return(num)
 
 print("Enter Number:")
-number=input()
-number=int(number)
+
+try:
+    number=input()
+    number=int(number)
+except: 
+    print("Enter a valid number!")
+    sys.exit()
 
 while True:
     newNum=int(collatz(number))
