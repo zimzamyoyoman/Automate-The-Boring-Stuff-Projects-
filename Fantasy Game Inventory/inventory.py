@@ -14,11 +14,12 @@ def addToInventory(inventory, addedItems):
             inventory.setdefault(listItem,1)
     print("After adding items:")
     displayInventory(inventory)
+    return inventory
 
 stuff = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
 displayInventory(stuff)
 
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 goblinLoot = ['gold coin', 'wine', 'grapes', 'gold chain', 'arrow']
-addToInventory(stuff,dragonLoot)
-addToInventory(stuff,goblinLoot)
+stuff=addToInventory(stuff,dragonLoot)
+stuff=addToInventory(stuff,goblinLoot)
